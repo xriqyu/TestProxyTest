@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.sharding.test'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.0'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.48'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
+    compile group: 'com.esotericsoftware', name: 'kryo', version: '4.0.2'
+    compile group: 'com.esotericsoftware', name: 'kryo-shaded', version: '4.0.2'
+
+    compile fileTree(dir: 'lib', include: '*.jar')
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
